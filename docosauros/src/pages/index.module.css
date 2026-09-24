@@ -1,0 +1,391 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 5.5rem 0 4.5rem;
+  color: #f7fbff;
+  background: linear-gradient(105deg, #050c16 0%, #07182e 28%, #0a4d86 62%, #1a8fe0 100%);
+  background-size: 160% 160%;
+  animation: bannerShift 16s ease-in-out infinite;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.content > * {
+  animation: riseIn 0.7s ease both;
+}
+
+.content > *:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.content > *:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.content > *:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.content > *:nth-child(4) {
+  animation-delay: 0.28s;
+}
+
+.content > *:nth-child(5) {
+  animation-delay: 0.36s;
+}
+
+.content > *:nth-child(6) {
+  animation-delay: 0.44s;
+}
+
+.glow {
+  position: absolute;
+  z-index: 0;
+  width: 58%;
+  height: 160%;
+  right: -8%;
+  top: -30%;
+  background: radial-gradient(circle, rgba(90, 200, 255, 0.42), transparent 62%);
+  filter: blur(2px);
+  animation: glowDrift 9s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.streams,
+.streamsFast {
+  position: absolute;
+  z-index: 0;
+  inset: -20% -10%;
+  pointer-events: none;
+}
+
+.streams {
+  background: repeating-linear-gradient(
+    115deg,
+    transparent 0 22px,
+    rgba(90, 210, 255, 0.09) 22px 23px
+  );
+  mask-image: linear-gradient(90deg, transparent 0%, #000 18%, transparent 78%);
+  animation: streamFlow 14s linear infinite;
+}
+
+.streamsFast {
+  background: repeating-linear-gradient(
+    115deg,
+    transparent 0 46px,
+    rgba(180, 235, 255, 0.16) 46px 47px,
+    transparent 47px 70px
+  );
+  mask-image: linear-gradient(90deg, transparent 10%, #000 40%, transparent 85%);
+  animation: streamFlow 7s linear infinite;
+}
+
+.bits {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bit {
+  position: absolute;
+  top: -12%;
+  left: calc(6% + (var(--i) * 7.4%));
+  color: rgba(170, 225, 255, 0.45);
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  animation: bitFall calc(7s + (var(--i) * 0.45s)) linear infinite;
+  animation-delay: calc(var(--i) * -0.85s);
+}
+
+@keyframes bannerShift {
+  0%,
+  100% {
+    background-position: 0% 40%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+}
+
+@keyframes glowDrift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-8%, 10%, 0) scale(1.12);
+  }
+}
+
+@keyframes streamFlow {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(120px, 70px, 0);
+  }
+}
+
+@keyframes bitFall {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate3d(36px, 520px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero,
+  .glow,
+  .streams,
+  .streamsFast,
+  .bit,
+  .content > *,
+  .skill,
+  .sectionTitle,
+  .sectionLead,
+  .card,
+  .methodGrid > div {
+    animation: none;
+  }
+}
+
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 0.9em;
+  margin-left: 3px;
+  background: #7ad7ff;
+  vertical-align: -0.08em;
+  animation: caretBlink 0.85s steps(1) infinite;
+}
+
+.caretDone {
+  opacity: 0;
+  animation: none;
+}
+
+@keyframes caretBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.kicker {
+  position: relative;
+  margin: 0 0 0.8rem;
+  color: #9ad8ff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.title {
+  position: relative;
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 5.4rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 0.95;
+}
+
+.tagline {
+  position: relative;
+  margin: 1rem 0 1.4rem;
+  font-size: clamp(0.95rem, 2vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.skills {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 1.4rem;
+}
+
+.skill {
+  padding: 0.28rem 0.75rem;
+  border: 1px solid rgba(122, 215, 255, 0.45);
+  border-radius: 999px;
+  color: #7ad7ff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  animation: riseIn 0.55s ease both;
+  animation-delay: calc(0.32s + (var(--i) * 0.06s));
+}
+
+.lead {
+  position: relative;
+  max-width: 40rem;
+  margin-bottom: 1.8rem;
+  color: #d5e7f6;
+  font-size: 1.08rem;
+}
+
+.actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.primary {
+  background: #f7fbff;
+  color: #071525;
+  border: none;
+  font-weight: 700;
+}
+
+.primary:hover {
+  background: #d7f1ff;
+  color: #071525;
+}
+
+.ghost {
+  background: transparent;
+  color: #f7fbff;
+  border: 1px solid rgba(247, 251, 255, 0.45);
+  font-weight: 700;
+}
+
+.ghost:hover {
+  color: #071525;
+  background: #f7fbff;
+}
+
+.tracks,
+.method {
+  padding: 4rem 0;
+}
+
+.sectionTitle {
+  margin-bottom: 0.4rem;
+}
+
+.sectionLead {
+  max-width: 42rem;
+  margin-bottom: 1.8rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.2rem 1.15rem 1.1rem;
+  border: 1px solid rgba(62, 196, 255, 0.2);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(22, 134, 212, 0.14), rgba(7, 16, 28, 0.2));
+  animation: riseIn 0.65s ease backwards;
+  animation-delay: calc(0.12s + (var(--i) * 0.07s));
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.card:hover,
+.panel:hover {
+  transform: translateY(-6px);
+  border-color: rgba(62, 196, 255, 0.75);
+  box-shadow: 0 16px 36px rgba(4, 20, 40, 0.45), 0 0 24px rgba(62, 196, 255, 0.16);
+}
+
+.card h3 {
+  margin: 0.2rem 0 0.45rem;
+}
+
+.card p {
+  margin-bottom: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.step {
+  color: #3ec4ff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.8rem;
+  font-weight: 700;
+}
+
+.links a {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover .links a:hover,
+.links a:hover {
+  transform: translateY(-1px);
+}
+
+.method {
+  border-top: 1px solid rgba(62, 196, 255, 0.14);
+}
+
+.methodGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.panel {
+  padding: 1rem 1rem 0.8rem;
+  border: 1px solid rgba(62, 196, 255, 0.16);
+  border-radius: 14px;
+  background: rgba(14, 28, 48, 0.35);
+  animation: riseIn 0.65s ease backwards;
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.methodGrid > div {
+  animation: riseIn 0.65s ease backwards;
+}
+
+.methodGrid > div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.methodGrid > div:nth-child(3) {
+  animation-delay: 0.18s;
+}
+
+.methodGrid h3 {
+  margin-bottom: 0.35rem;
+  color: #3ec4ff;
+}
+
+@media screen and (max-width: 996px) {
+  .hero {
+    padding: 3.2rem 0 2.8rem;
+  }
+}

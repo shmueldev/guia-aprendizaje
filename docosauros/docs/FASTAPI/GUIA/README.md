@@ -1,3 +1,11 @@
+---
+id: fastapi
+title: FastAPI
+sidebar_label: FastAPI
+description: Plan de aprendizaje completo de FastAPI, desde Python moderno hasta producción.
+slug: /fastapi
+---
+
 # 🚀 Plan de Aprendizaje Completo: FastAPI
 
 > **Objetivo:** Dominar el desarrollo de APIs profesionales con FastAPI, desde los fundamentos de Python moderno hasta el despliegue en producción, incluyendo visualización interactiva con Dash.
