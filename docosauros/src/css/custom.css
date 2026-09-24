@@ -1,19 +1,33 @@
 :root {
-  --ifm-color-primary: #1578c2;
-  --ifm-color-primary-dark: #136cad;
-  --ifm-color-primary-darker: #1266a4;
-  --ifm-color-primary-darkest: #0e5487;
-  --ifm-color-primary-light: #1a86d6;
-  --ifm-color-primary-lighter: #2390e0;
-  --ifm-color-primary-lightest: #4aa6e8;
+  --ifm-color-primary: #0e6aaf;
+  --ifm-color-primary-dark: #0c5f9e;
+  --ifm-color-primary-darker: #0b5a95;
+  --ifm-color-primary-darkest: #094a7b;
+  --ifm-color-primary-light: #1278c4;
+  --ifm-color-primary-lighter: #1a82cf;
+  --ifm-color-primary-lightest: #3d9adf;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --ifm-heading-font-weight: 750;
   --ifm-navbar-height: 64px;
+  --ifm-background-color: #f3f7fb;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.92);
+  --ifm-font-color-base: #1c3044;
+  --ifm-heading-color: #0c1c2e;
+  --ifm-color-content: #24384c;
+  --ifm-color-content-secondary: #4a6278;
+  --ifm-menu-color: #2c455c;
+  --ifm-menu-color-active: #0e6aaf;
+  --ifm-toc-border-color: rgba(14, 106, 175, 0.16);
+  --ifm-hover-overlay: rgba(14, 106, 175, 0.07);
+  --ifm-code-background: #e7f1fa;
+  --ifm-card-background-color: #ffffff;
+  --ifm-table-stripe-background: rgba(14, 106, 175, 0.05);
   --sd-navy: #071018;
   --sd-cyan: #3ec4ff;
   --sd-blue: #1686d4;
-  --docusaurus-highlighted-code-line-bg: rgba(22, 134, 212, 0.12);
+  --docusaurus-highlighted-code-line-bg: rgba(14, 106, 175, 0.12);
 }
 
 [data-theme='dark'] {
@@ -42,8 +56,32 @@
 }
 
 .navbar {
-  border-bottom: 1px solid rgba(62, 196, 255, 0.14);
+  border-bottom: 1px solid rgba(14, 106, 175, 0.14);
+  box-shadow: 0 1px 0 rgba(14, 106, 175, 0.04);
+  backdrop-filter: blur(10px);
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom-color: rgba(62, 196, 255, 0.14);
   box-shadow: none;
+}
+
+[data-theme='light'] .theme-doc-sidebar-container {
+  border-right: 1px solid rgba(14, 106, 175, 0.12);
+  background: #f7fbfe;
+}
+
+[data-theme='light'] .menu__link--active:not(.menu__link--sublist) {
+  background: rgba(14, 106, 175, 0.1);
+}
+
+[data-theme='light'] .pagination-nav__link {
+  border-color: rgba(14, 106, 175, 0.18);
+  background: #ffffff;
+}
+
+[data-theme='light'] .pagination-nav__link:hover {
+  border-color: #0e6aaf;
 }
 
 .navbar__title {
@@ -262,8 +300,17 @@
 }
 
 .markdown h2 {
-  border-bottom: 1px solid rgba(62, 196, 255, 0.18);
+  border-bottom: 1px solid rgba(14, 106, 175, 0.16);
   padding-bottom: 0.35rem;
+}
+
+[data-theme='dark'] .markdown h2 {
+  border-bottom-color: rgba(62, 196, 255, 0.18);
+}
+
+[data-theme='light'] .markdown h2:hover,
+[data-theme='light'] .markdown h3:hover {
+  color: #0e6aaf;
 }
 
 .markdown li input[type='checkbox'] {

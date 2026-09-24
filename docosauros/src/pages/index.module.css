@@ -206,6 +206,7 @@
 .title {
   position: relative;
   margin: 0;
+  color: #ffffff;
   font-size: clamp(3rem, 8vw, 5.4rem);
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -295,8 +296,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
 }
 
 .card {
@@ -323,6 +324,38 @@
 .card p {
   margin-bottom: 0.9rem;
   color: var(--ifm-color-emphasis-700);
+}
+
+:global([data-theme='light']) .card {
+  background: linear-gradient(180deg, #ffffff 0%, #eef5fb 100%);
+  border-color: rgba(14, 106, 175, 0.2);
+  box-shadow: 0 10px 24px rgba(16, 58, 102, 0.06);
+}
+
+:global([data-theme='light']) .card:hover,
+:global([data-theme='light']) .panel:hover {
+  border-color: rgba(14, 106, 175, 0.55);
+  box-shadow: 0 16px 32px rgba(16, 58, 102, 0.12);
+}
+
+:global([data-theme='light']) .panel {
+  background: #ffffff;
+  border-color: rgba(14, 106, 175, 0.16);
+  box-shadow: 0 8px 20px rgba(16, 58, 102, 0.05);
+}
+
+:global([data-theme='light']) .step,
+:global([data-theme='light']) .methodGrid h3 {
+  color: #0e6aaf;
+}
+
+:global([data-theme='light']) .method {
+  border-top-color: rgba(14, 106, 175, 0.14);
+}
+
+:global([data-theme='light']) .sectionLead,
+:global([data-theme='light']) .card p {
+  color: #3e556b;
 }
 
 .step {
@@ -387,5 +420,9 @@
 @media screen and (max-width: 996px) {
   .hero {
     padding: 3.2rem 0 2.8rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
