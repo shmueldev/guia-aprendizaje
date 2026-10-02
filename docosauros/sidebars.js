@@ -25,7 +25,27 @@ const sidebars = {
       type: 'category',
       label: '2. Backend',
       collapsed: false,
-      items: ['FASTAPI/GUIA/fastapi', 'DJANGO/GUIA/django'],
+      items: [
+        'FASTAPI/GUIA/fastapi',
+        {
+          type: 'category',
+          label: 'FastAPI · mis notas',
+          collapsed: false,
+          items: [
+            'FASTAPI/NOTAS/notas',
+            'FASTAPI/NOTAS/fase-1',
+            'FASTAPI/NOTAS/rutas',
+            'FASTAPI/NOTAS/pydantic',
+            'FASTAPI/NOTAS/respuestas',
+            'FASTAPI/NOTAS/errores',
+            'FASTAPI/NOTAS/dependencias',
+            'FASTAPI/NOTAS/sql',
+            'FASTAPI/NOTAS/sqlalchemy',
+            'FASTAPI/NOTAS/alembic',
+          ],
+        },
+        'DJANGO/GUIA/django',
+      ],
     },
     {
       type: 'category',

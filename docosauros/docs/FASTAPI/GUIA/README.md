@@ -11,6 +11,8 @@ slug: /fastapi
 > **Objetivo:** Dominar el desarrollo de APIs profesionales con FastAPI, desde los fundamentos de Python moderno hasta el despliegue en producción, incluyendo visualización interactiva con Dash.
 >
 > **Metodología sugerida:** Cada fase incluye teoría + práctica. No avances a la siguiente fase sin haber construido al menos un mini-proyecto con lo aprendido. Marca los checkboxes `[ ]` conforme avances.
+>
+> **Avance actual:** las notas propias llegan hasta la fase 3 (sin los proyectos). Están en [Mis notas](/docs/fastapi/notas).
 
 ---
 
