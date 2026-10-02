@@ -8,9 +8,7 @@ slug: /fastapi/notas
 
 # Mis notas de FastAPI
 
-Esto es lo que llevo estudiado. Cubre la guía hasta la **fase 3**. Los proyectos de fase (el To-Do y los siguientes) no están aquí.
-
-Las fases 4 a 7 siguen en el [plan](/docs/fastapi). Esas todavía las estoy estudiando.
+Esto es lo que llevo estudiado. Cubre la guía hasta la **fase 3**. Las fases 4 a 7 y los proyectos ya tienen página, vacía, para llenarla al estudiarlas. El plan completo sigue en la [guía](/docs/fastapi).
 
 ## Fase 1 · Python moderno
 
@@ -30,4 +28,12 @@ Las fases 4 a 7 siguen en el [plan](/docs/fastapi). Esas todavía las estoy estu
 - [SQLAlchemy 2.0](/docs/fastapi/notas/sqlalchemy)
 - [Alembic](/docs/fastapi/notas/alembic)
 
-Los ejemplos de código de estas páginas salen de los apuntes de `projects/fastapi`. Donde un snippet no corría, quedó corregido. La idea de cada nota es la misma.
+## Más adelante
+
+- [Fase 4 · APIs externas y seguridad](/docs/fastapi/notas/fase-4)
+- [Fase 5 · Arquitectura y calidad](/docs/fastapi/notas/fase-5)
+- [Fase 6 · Dash](/docs/fastapi/notas/fase-6)
+- [Fase 7 · Despliegue](/docs/fastapi/notas/fase-7)
+- [Proyectos](/docs/fastapi/notas/proyectos)
+
+Los ejemplos de código de las fases 1 a 3 salen de los apuntes de `projects/fastapi`. Donde un snippet no corría, quedó corregido. La idea de cada nota es la misma.
