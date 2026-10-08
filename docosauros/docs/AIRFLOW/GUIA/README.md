@@ -12,6 +12,8 @@ slug: /airflow
 >
 > **Metodología:** Corre Airflow en local con el proyecto oficial o Docker Compose. Un DAG que solo funciona en tu sesión de notebook no cuenta.
 
+Tus apuntes van en [Mis notas](/docs/airflow/notas).
+
 ## Índice
 
 1. [Fase 1: Conceptos y el scheduler](#fase-1-conceptos-y-el-scheduler)

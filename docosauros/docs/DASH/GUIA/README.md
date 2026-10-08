@@ -12,6 +12,8 @@ slug: /dash
 >
 > **Metodología:** La guía de FastAPI ya toca Dash como consumidor de API. Aquí el foco es el producto visual: layout, filtros y una lectura clara.
 
+Tus apuntes van en [Mis notas](/docs/dash/notas).
+
 ## Índice
 
 1. [Fase 1: Plotly y el primer layout](#fase-1-plotly-y-el-primer-layout)

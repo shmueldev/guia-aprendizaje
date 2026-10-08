@@ -12,6 +12,8 @@ slug: /validacion
 >
 > **Metodología:** Reutiliza el problema de la guía de Machine Learning. Esta guía no entrena modelos nuevos por deporte; pone a prueba el que ya tienes.
 
+Tus apuntes van en [Mis notas](/docs/validacion/notas).
+
 ## Índice
 
 1. [Fase 1: Partir los datos en serio](#fase-1-partir-los-datos-en-serio)

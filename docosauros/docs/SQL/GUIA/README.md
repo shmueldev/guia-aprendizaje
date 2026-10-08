@@ -12,6 +12,8 @@ slug: /sql
 >
 > **Metodología:** Usa PostgreSQL o SQL Server. Cada fase termina con una consulta guardada, no con un resultado pegado en un chat.
 
+Tus apuntes van en [Mis notas](/docs/sql/notas).
+
 ## Índice
 
 1. [Fase 1: Lectura y filtros](#fase-1-lectura-y-filtros)

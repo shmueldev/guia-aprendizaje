@@ -12,6 +12,8 @@ slug: /django
 >
 > **Metodología:** Cada fase cierra con un entregable. FastAPI ya cubre APIs livianas; aquí el foco es el framework completo y Django REST Framework.
 
+Tus apuntes van en [Mis notas](/docs/django/notas).
+
 ## Índice
 
 1. [Fase 1: Proyecto, apps y el ciclo de una petición](#fase-1-proyecto-apps-y-el-ciclo-de-una-petición)

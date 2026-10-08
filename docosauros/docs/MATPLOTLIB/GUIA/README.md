@@ -12,6 +12,8 @@ slug: /matplotlib
 >
 > **Metodología:** Cada gráfica responde una pregunta. Si el título no es una frase con el hallazgo, se rehace.
 
+Tus apuntes van en [Mis notas](/docs/matplotlib/notas).
+
 ## Índice
 
 1. [Fase 1: Figura, ejes y el objeto Artist](#fase-1-figura-ejes-y-el-objeto-artist)

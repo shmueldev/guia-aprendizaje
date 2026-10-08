@@ -12,6 +12,8 @@ slug: /numpy
 >
 > **Metodología:** Cada fase termina con un script medido. Si un `for` recorre celdas, todavía no está la fase.
 
+Tus apuntes van en [Mis notas](/docs/numpy/notas).
+
 ## Índice
 
 1. [Fase 1: Arrays, dtypes y creación](#fase-1-arrays-dtypes-y-creación)

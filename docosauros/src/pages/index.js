@@ -58,9 +58,30 @@ function TypeLine({text, as = 'span', className, delay = 0, speed = 28}) {
   );
 }
 
-const tracks = [
+const pythonTracks = [
   {
     step: '01',
+    title: 'Intermedio',
+    text: 'Funciones, colecciones, módulos, archivos y errores. La base para no pelear con el lenguaje.',
+    links: [{label: 'Empezar', to: '/docs/python-intermedio'}],
+  },
+  {
+    step: '02',
+    title: 'POO',
+    text: 'Clases y un dominio propio. FastAPI y Django son clases: aquí se entiende el molde.',
+    links: [{label: 'Empezar', to: '/docs/python-poo'}],
+  },
+  {
+    step: '03',
+    title: 'Avanzado',
+    text: 'Decoradores, tipos, asyncio y pruebas. Lo que después ves en FastAPI, Pandas y PySpark.',
+    links: [{label: 'Empezar', to: '/docs/python-avanzado'}],
+  },
+];
+
+const tracks = [
+  {
+    step: '04',
     title: 'Fundamentos',
     text: 'SQL, tablas limpias y estadística. La base del ingeniero y del científico de datos.',
     links: [
@@ -70,7 +91,7 @@ const tracks = [
     ],
   },
   {
-    step: '02',
+    step: '05',
     title: 'Backend',
     text: 'Crear APIs y entender un patrón de diseño, no solo consumirlas.',
     links: [
@@ -79,7 +100,7 @@ const tracks = [
     ],
   },
   {
-    step: '03',
+    step: '06',
     title: 'Data Science',
     text: 'Modelos con una métrica honesta y un resultado que se puede repetir.',
     links: [
@@ -89,7 +110,7 @@ const tracks = [
     ],
   },
   {
-    step: '04',
+    step: '07',
     title: 'Pipelines',
     text: 'Construir flujos de datos en distintos ambientes y plataformas.',
     links: [
@@ -99,7 +120,7 @@ const tracks = [
     ],
   },
   {
-    step: '05',
+    step: '08',
     title: 'Cloud',
     text: 'Nube más allá de lo esencial: datos, seguridad y costo.',
     links: [
@@ -108,7 +129,7 @@ const tracks = [
     ],
   },
   {
-    step: '06',
+    step: '09',
     title: 'Frontend',
     text: 'Interfaces y dashboards con una UX clara sobre tus datos.',
     links: [
@@ -166,8 +187,8 @@ function Hero() {
           </Link>
           <Link
             className={clsx('button button--lg', styles.ghost)}
-            to="/docs/machine-learning">
-            Abrir Machine Learning
+            to="/docs/python-intermedio">
+            Abrir Python
           </Link>
         </div>
       </div>
@@ -185,7 +206,27 @@ export default function Home() {
       <main>
         <section className={styles.tracks}>
           <div className="container">
-            <TypeLine as="h2" className={styles.sectionTitle} text="Orden para aprender" delay={200} speed={38} />
+            <TypeLine as="h2" className={styles.sectionTitle} text="Primero Python" delay={120} speed={38} />
+            <p className={styles.sectionLead}>
+              Intermedio, objetos y avanzado. Con esto FastAPI, Django, Pandas y PySpark se leen, no se memorizan.
+            </p>
+            <div className={styles.grid}>
+              {pythonTracks.map((track, index) => (
+                <article key={track.title} className={styles.card} style={{'--i': index}}>
+                  <span className={styles.step}>{track.step}</span>
+                  <TypeLine as="h3" text={track.title} delay={280 + index * 160} speed={36} />
+                  <p>{track.text}</p>
+                  <div className={styles.links}>
+                    {track.links.map((link) => (
+                      <Link key={link.to} to={link.to}>
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+            <TypeLine as="h2" className={clsx(styles.sectionTitle, styles.nextBlock)} text="Orden para aprender" delay={200} speed={38} />
             <TypeLine
               as="p"
               className={styles.sectionLead}

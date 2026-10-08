@@ -12,6 +12,8 @@ slug: /machine-learning
 >
 > **Metodología:** Un solo problema de principio a fin (clasificación o regresión de negocio). Las fases rehacen ese problema, no saltan de dataset de juguete en juguete.
 
+Tus apuntes van en [Mis notas](/docs/machine-learning/notas).
+
 ## Índice
 
 1. [Fase 1: El problema antes del algoritmo](#fase-1-el-problema-antes-del-algoritmo)

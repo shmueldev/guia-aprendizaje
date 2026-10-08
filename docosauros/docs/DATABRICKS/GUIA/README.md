@@ -12,6 +12,8 @@ slug: /databricks
 >
 > **Metodología:** Todo lo que sirva en PySpark se reutiliza. Aquí se suma la plataforma: workspace, catálogo, jobs y tablas Delta.
 
+Tus apuntes van en [Mis notas](/docs/databricks/notas).
+
 ## Índice
 
 1. [Fase 1: Workspace y clusters](#fase-1-workspace-y-clusters)

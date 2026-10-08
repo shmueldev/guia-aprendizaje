@@ -10,11 +10,19 @@ description: Orden para formarte como ingeniero de datos y data scientist.
 
 Esta guía lleva a un perfil doble: **ingeniero** que construye pipelines, APIs y plataformas, y **data scientist** que entiende los datos, mide bien y deja un modelo usable.
 
-El orden importa. Primero los datos y la estadística, después el sistema que los mueve, después el modelo, y al final la nube y la interfaz.
+El orden importa. Primero Python, hasta manejarlo con soltura. Después los datos y la estadística, el sistema que los mueve, el modelo, y al final la nube y la interfaz.
 
 Marca el avance dentro de cada tecnología. No saltes de fase sin el mini-proyecto de esa fase.
 
-## 1. Fundamentos
+## 1. Python
+
+FastAPI, Django, Pandas y PySpark se escriben en Python. Si el lenguaje está firme, el framework se entiende. Si no, se memoriza.
+
+1. [Python intermedio](/docs/python-intermedio)
+2. [Python con POO](/docs/python-poo)
+3. [Python avanzado](/docs/python-avanzado)
+
+## 2. Fundamentos
 
 Sin SQL, tablas limpias y estadística no hay ingeniería seria ni ciencia de datos.
 
@@ -25,14 +33,14 @@ Sin SQL, tablas limpias y estadística no hay ingeniería seria ni ciencia de da
 5. [Seaborn](/docs/seaborn)
 6. [Estadística](/docs/estadistica)
 
-## 2. Backend
+## 3. Backend
 
 Saber consumir una API no alcanza. Hay que crearla, con un patrón de diseño claro.
 
 1. [FastAPI](/docs/fastapi)
 2. [Django](/docs/django)
 
-## 3. Data Science
+## 4. Data Science
 
 Modelar con criterio: una línea base, una métrica honesta y un resultado que se puede repetir.
 
@@ -40,7 +48,7 @@ Modelar con criterio: una línea base, una métrica honesta y un resultado que s
 2. [Validación y experimentos](/docs/validacion)
 3. [Modelos en producción](/docs/modelos-produccion)
 
-## 4. Pipelines
+## 5. Pipelines
 
 Construir flujos de datos en más de un ambiente y más de una plataforma.
 
@@ -48,14 +56,14 @@ Construir flujos de datos en más de un ambiente y más de una plataforma.
 2. [Databricks](/docs/databricks)
 3. [Airflow](/docs/airflow)
 
-## 5. Cloud
+## 6. Cloud
 
 Nube más allá de crear una cuenta y subir un archivo.
 
 1. [AWS](/docs/aws)
 2. [Azure](/docs/azure)
 
-## 6. Frontend
+## 7. Frontend
 
 Una plataforma de datos también necesita una interfaz clara.
 

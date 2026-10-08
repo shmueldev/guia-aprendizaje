@@ -12,6 +12,8 @@ slug: /azure
 >
 > **Metodología:** Un grupo de recursos de práctica. Todo lo que crees vive ahí para poder borrarlo de un golpe al cerrar la fase.
 
+Tus apuntes van en [Mis notas](/docs/azure/notas).
+
 ## Índice
 
 1. [Fase 1: Suscripción, identidad y grupos de recursos](#fase-1-suscripción-identidad-y-grupos-de-recursos)

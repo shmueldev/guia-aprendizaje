@@ -12,6 +12,8 @@ slug: /javascript
 >
 > **Metodología:** Sin framework en esta guía. El navegador y Node bastan. Cada fase deja un archivo que abres y usas.
 
+Tus apuntes van en [Mis notas](/docs/javascript/notas).
+
 ## Índice
 
 1. [Fase 1: Lenguaje](#fase-1-lenguaje)

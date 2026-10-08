@@ -12,6 +12,8 @@ slug: /seaborn
 >
 > **Metodología:** Seaborn resume relaciones. Matplotlib sigue siendo el lienzo. No abandones lo aprendido en la guía anterior.
 
+Tus apuntes van en [Mis notas](/docs/seaborn/notas).
+
 ## Índice
 
 1. [Fase 1: Temas, DataFrames y figuras](#fase-1-temas-dataframes-y-figuras)

@@ -12,6 +12,8 @@ slug: /pandas
 >
 > **Metodología:** Trabaja sobre un archivo real (ventas, logs o un export de Power BI). Cada fase deja ese archivo más usable que al empezar.
 
+Tus apuntes van en [Mis notas](/docs/pandas/notas).
+
 ## Índice
 
 1. [Fase 1: Series, DataFrame y lectura](#fase-1-series-dataframe-y-lectura)

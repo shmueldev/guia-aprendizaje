@@ -12,6 +12,8 @@ slug: /estadistica
 >
 > **Metodología:** Cada fase usa un dataset real en Pandas. La fórmula se entiende con un ejemplo numérico antes de pasar a la siguiente.
 
+Tus apuntes van en [Mis notas](/docs/estadistica/notas).
+
 ## Índice
 
 1. [Fase 1: Describir sin engañarse](#fase-1-describir-sin-engañarse)

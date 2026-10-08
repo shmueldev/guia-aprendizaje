@@ -12,6 +12,8 @@ slug: /modelos-produccion
 >
 > **Metodología:** El modelo es el de las guías anteriores. Aquí el trabajo de ingeniería es empaquetarlo, exponerlo y vigilarlo. FastAPI es el servidor.
 
+Tus apuntes van en [Mis notas](/docs/modelos-produccion/notas).
+
 ## Índice
 
 1. [Fase 1: Del notebook al artefacto](#fase-1-del-notebook-al-artefacto)

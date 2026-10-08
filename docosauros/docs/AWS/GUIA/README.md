@@ -12,6 +12,8 @@ slug: /aws
 >
 > **Metodología:** Usa una cuenta de práctica y un presupuesto con alarma. Cada fase debe poder apagarse. No dejes un recurso corriendo “para ver”.
 
+Tus apuntes van en [Mis notas](/docs/aws/notas).
+
 ## Índice
 
 1. [Fase 1: Cuenta, IAM y regiones](#fase-1-cuenta-iam-y-regiones)

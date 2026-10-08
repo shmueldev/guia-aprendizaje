@@ -12,6 +12,8 @@ slug: /react
 >
 > **Metodología:** Vite + React. JavaScript de la guía anterior se asume. El entregable es una app de varias vistas, no un solo componente gigante.
 
+Tus apuntes van en [Mis notas](/docs/react/notas).
+
 ## Índice
 
 1. [Fase 1: Componentes y JSX](#fase-1-componentes-y-jsx)

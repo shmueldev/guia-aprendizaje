@@ -12,6 +12,8 @@ slug: /pyspark
 >
 > **Metodología:** Empieza en local (`local[*]`). Cada fase debe poder correr de nuevo y escribir Parquet, no solo mostrarse con `show()`.
 
+Tus apuntes van en [Mis notas](/docs/pyspark/notas).
+
 ## Índice
 
 1. [Fase 1: Sesión, lazy evaluation y el cluster](#fase-1-sesión-lazy-evaluation-y-el-cluster)
