@@ -14,6 +14,8 @@ slug: /python-poo
 
 Tus apuntes van en [Mis notas](/docs/python-poo/notas).
 
+> **Avance actual:** las notas propias llegan hasta la fase 4. Están en [Mis notas](/docs/python-poo/notas).
+
 ## Índice
 
 1. [Fase 1: Clases y objetos](#fase-1-clases-y-objetos)
