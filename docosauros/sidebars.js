@@ -64,7 +64,27 @@ const sidebars = {
       type: 'category',
       label: '2. Git y GitHub',
       collapsed: false,
-      items: ['GIT-GITHUB/GUIA/git-github'],
+      items: [
+        'GIT-GITHUB/GUIA/git-github',
+        {
+          type: 'category',
+          label: 'Git y GitHub · mis notas',
+          collapsed: true,
+          items: [
+            'GIT-GITHUB/NOTAS/notas',
+            'GIT-GITHUB/NOTAS/fase-1',
+            'GIT-GITHUB/NOTAS/fase-2',
+            'GIT-GITHUB/NOTAS/fase-3',
+            'GIT-GITHUB/NOTAS/fase-4',
+            'GIT-GITHUB/NOTAS/fase-5',
+            'GIT-GITHUB/NOTAS/fase-6',
+            'GIT-GITHUB/NOTAS/fase-7',
+            'GIT-GITHUB/NOTAS/fase-8',
+            'GIT-GITHUB/NOTAS/fase-9',
+            'GIT-GITHUB/NOTAS/proyectos',
+          ],
+        },
+      ],
     },
     {
       type: 'category',
