@@ -82,6 +82,12 @@ const pythonTracks = [
 const tracks = [
   {
     step: '04',
+    title: 'Git y GitHub',
+    text: 'Historial, ramas, PRs, seguridad y releases. La herramienta de todo el resto de la ruta.',
+    links: [{label: 'Git y GitHub', to: '/docs/git-github'}],
+  },
+  {
+    step: '05',
     title: 'Fundamentos',
     text: 'SQL, tablas limpias y estadística. La base del ingeniero y del científico de datos.',
     links: [
@@ -91,7 +97,7 @@ const tracks = [
     ],
   },
   {
-    step: '05',
+    step: '06',
     title: 'Backend',
     text: 'Crear APIs y entender un patrón de diseño, no solo consumirlas.',
     links: [
@@ -100,7 +106,7 @@ const tracks = [
     ],
   },
   {
-    step: '06',
+    step: '07',
     title: 'Data Science',
     text: 'Modelos con una métrica honesta y un resultado que se puede repetir.',
     links: [
@@ -110,7 +116,7 @@ const tracks = [
     ],
   },
   {
-    step: '07',
+    step: '08',
     title: 'Pipelines',
     text: 'Construir flujos de datos en distintos ambientes y plataformas.',
     links: [
@@ -120,7 +126,7 @@ const tracks = [
     ],
   },
   {
-    step: '08',
+    step: '09',
     title: 'Cloud',
     text: 'Nube más allá de lo esencial: datos, seguridad y costo.',
     links: [
@@ -129,7 +135,7 @@ const tracks = [
     ],
   },
   {
-    step: '09',
+    step: '10',
     title: 'Frontend',
     text: 'Interfaces y dashboards con una UX clara sobre tus datos.',
     links: [
@@ -140,7 +146,7 @@ const tracks = [
   },
 ];
 
-const skills = ['Python', 'SQL', 'ML', 'Airflow', 'Spark', 'Cloud'];
+const skills = ['Python', 'Git', 'SQL', 'ML', 'Airflow', 'Cloud'];
 
 const bits = ['0', '1', '01', '10', '0', '1', '11', '0', '10', '1', '0', '01'];
 

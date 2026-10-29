@@ -1,14 +1,16 @@
 ---
 id: fase-2
-title: Fase 2 · Comportamiento y datos protegidos
-sidebar_label: 2. Datos protegidos
+title: Fase 2 · Encapsulamiento y decoradores de clase
+sidebar_label: 2. Encapsulamiento
 description: Apuntes de encapsulamiento, @property y métodos especiales.
 slug: /python-poo/notas/fase-2
 ---
 
-# Fase 2: Comportamiento y datos protegidos
+# Fase 2: Encapsulamiento, decoradores de clase y métodos especiales
 
 Esta fase va al encapsulamiento: el objeto es el único dueño de sus datos y nadie desde afuera debería poder romperlo o dejarlo en un estado inconsistente.
+
+> En la [guía](/docs/python-poo) esta fase también pide `@classmethod`, `@staticmethod`, `__atributo` (name mangling) y más dunder (`__hash__`, `__contains__`, `__getitem__`, `__bool__`). Abajo está lo que ya documenté; el resto se completa al estudiarlo.
 
 ## 1. Convención `_atributo` y por qué no es seguridad real
 
@@ -219,3 +221,49 @@ if __name__ == "__main__":
 ```
 
 > Con este tipo de diseño no solo protejo datos, sino que también construyo objetos con identidad, reglas y comportamiento claros. Eso es un paso importante hacia software más profesional y más difícil de romper.
+
+## 6. Lo que la guía pide además (para estudiar / completar)
+
+### `__atributo` (name mangling)
+
+Con doble guion bajo, Python renombra el atributo a `_Clase__atributo`. No es privacidad real; evita choques en herencia.
+
+```python
+class Caja:
+    def __init__(self):
+        self.__secreto = 1
+
+c = Caja()
+# c.__secreto  # AttributeError
+print(c._Caja__secreto)  # 1
+```
+
+### `@classmethod` y `@staticmethod`
+
+```python
+class Usuario:
+    def __init__(self, email: str):
+        self.email = email
+
+    @classmethod
+    def desde_email(cls, email: str):
+        """Fábrica: crea la instancia a partir de un email."""
+        return cls(email.strip().lower())
+
+    @staticmethod
+    def email_parece_valido(email: str) -> bool:
+        """Helper: no usa self ni cls."""
+        return "@" in email and "." in email.split("@")[-1]
+```
+
+* `@classmethod` recibe la clase (`cls`): sirve para constructores alternativos.
+* `@staticmethod` no recibe `self` ni `cls`: es un helper ligado al tema de la clase.
+
+### Más dunder útiles
+
+| Método | Para qué |
+|---|---|
+| `__hash__` | Poder usar el objeto en un `set` o como clave de `dict` (junto con `__eq__`) |
+| `__bool__` | Qué significa `if objeto:` |
+| `__contains__` | `elemento in objeto` |
+| `__getitem__` | `objeto[clave]` |

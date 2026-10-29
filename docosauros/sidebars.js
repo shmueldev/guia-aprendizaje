@@ -62,7 +62,13 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '2. Fundamentos',
+      label: '2. Git y GitHub',
+      collapsed: false,
+      items: ['GIT-GITHUB/GUIA/git-github'],
+    },
+    {
+      type: 'category',
+      label: '3. Fundamentos',
       collapsed: false,
       items: [
         'SQL/GUIA/sql',
@@ -156,7 +162,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '3. Backend',
+      label: '4. Backend',
       collapsed: false,
       items: [
         'FASTAPI/GUIA/fastapi',
@@ -202,7 +208,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '4. Data Science',
+      label: '5. Data Science',
       collapsed: false,
       items: [
         'MACHINE-LEARNING/GUIA/machine-learning',
@@ -254,7 +260,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '5. Pipelines',
+      label: '6. Pipelines',
       collapsed: false,
       items: [
         'PYSPARK/GUIA/pyspark',
@@ -306,7 +312,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '6. Cloud',
+      label: '7. Cloud',
       collapsed: false,
       items: [
         'AWS/GUIA/aws',
@@ -343,7 +349,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '7. Frontend',
+      label: '8. Frontend',
       collapsed: false,
       items: [
         'DASH/GUIA/dash',

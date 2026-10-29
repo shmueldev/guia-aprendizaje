@@ -79,8 +79,8 @@ const config = {
             title: 'Ruta',
             items: [
               {label: 'Empezar', to: '/docs/intro'},
+              {label: 'Git y GitHub', to: '/docs/git-github'},
               {label: 'Backend', to: '/docs/fastapi'},
-              {label: 'Pipelines', to: '/docs/airflow'},
               {label: 'Cloud', to: '/docs/aws'},
             ],
           },
