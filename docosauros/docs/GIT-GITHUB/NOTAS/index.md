@@ -2,13 +2,13 @@
 id: notas
 title: Mis notas de Git y GitHub
 sidebar_label: Mis notas
-description: Apuntes propios de Git y GitHub. Fase 1 completa.
+description: Apuntes propios de Git y GitHub. Fase 1 completa; fase 2 en curso.
 slug: /git-github/notas
 ---
 
 # Mis notas de Git y GitHub
 
-Esto es lo que llevo estudiado. La **fase 1** (fundamentos de Git) está completa. El resto de fases siguen reservados.
+Esto es lo que llevo estudiado. La **fase 1** está completa. En la **fase 2** voy hasta SSH, forks y `push` / `fetch` / `pull`. Issues, PRs y el resto siguen reservados.
 
 El plan completo está en la [guía de Git y GitHub](/docs/git-github).
 
@@ -16,9 +16,12 @@ El plan completo está en la [guía de Git y GitHub](/docs/git-github).
 
 - [Fase 1 · Fundamentos de Git](/docs/git-github/notas/fase-1)
 
-## Más adelante
+## En curso
 
 - [Fase 2 · Introducción a GitHub](/docs/git-github/notas/fase-2)
+
+## Más adelante
+
 - [Fase 3 · Herramientas de colaboración](/docs/git-github/notas/fase-3)
 - [Fase 4 · Codespaces y editor web](/docs/git-github/notas/fase-4)
 - [Fase 5 · Seguridad y buenas prácticas](/docs/git-github/notas/fase-5)
