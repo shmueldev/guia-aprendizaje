@@ -2,13 +2,13 @@
 id: fase-2
 title: Fase 2 · Introducción a GitHub
 sidebar_label: 2. Introducción a GitHub
-description: "Apuntes de GitHub: cuenta, repos, SSH, forks y sync con push/fetch/pull."
+description: "Apuntes de GitHub: cuenta, repos, SSH, forks, sync, Issues y Pull requests."
 slug: /git-github/notas/fase-2
 ---
 
 # Fase 2: Introducción a GitHub
 
-Apunte hasta `push` / `fetch` / `pull`. Issues (2.9) y Pull requests (2.10) siguen pendientes.
+Fase 2 cerrada: cuenta, repos, SSH, forks, sync con remoto, Issues y Pull requests.
 
 El plan completo está en la [guía de Git y GitHub](/docs/git-github).
 
@@ -268,8 +268,170 @@ Si tu `main` local y `origin/main` divergieron, el `pull` (con merge) puede crea
 
 ## 2.9 Issues y plantillas
 
-Todavía en estudio. Cuando lo cierres: bug vs. feature, labels y plantillas en `.github/ISSUE_TEMPLATE/`.
+Los **Issues** son tickets del proyecto: organizan, debaten y hacen seguimiento de tareas (bugs, features, dudas).
+
+Imagina un tablero de notas: cada Issue es una nota con título, descripción y conversación.
+
+### Para qué se usan
+
+| Uso | Ejemplo |
+|---|---|
+| **Bug** | “El login falla en Android” |
+| **Feature** | “Agregar modo oscuro” |
+| **Tarea** | “Actualizar textos legales” |
+| **Discusión** | Acordar enfoque antes de codear |
+
+### Anatomía básica en GitHub
+
+1. **Título y descripción** — qué hay que resolver.
+2. **Assignees** — quién es responsable.
+3. **Labels** — `bug`, `enhancement`, `documentation`, etc.
+4. **Milestones** — agrupar Issues en un entregable (v1.0, sprint, etc.).
+5. **Comentarios** — hilo del equipo sobre esa tarea.
+
+### Buena descripción (sobre todo en bugs)
+
+- Pasos para reproducir.
+- **Esperado** vs. **actual**.
+- Entorno (versión, SO) y capturas si aplican.
+
+### Flujo con Git
+
+Cuando vas a resolver el Issue `#14`:
+
+1. Lees el Issue en GitHub.
+2. Creas una rama (`fix/login`, `feature/modo-oscuro`, …).
+3. Commits + `push` de esa rama.
+4. En el PR escribes `Closes #14` (o `Fixes #14`). Al mergear, GitHub **cierra el Issue** solo.
+
+### Plantillas (`.github/ISSUE_TEMPLATE/`)
+
+Obligan a quien abre un Issue a llenar un formulario (pasos, esperado, etc.) en lugar de un cuadro en blanco.
+
+Estructura (nombres exactos, sensibles a mayúsculas):
+
+```text
+tu-proyecto/
+└── .github/
+    └── ISSUE_TEMPLATE/
+        ├── bug_report.md
+        └── feature_request.md
+```
+
+Ejemplo `bug_report.md`:
+
+```markdown
+---
+name: Reporte de Error (Bug)
+about: Crea un reporte para identificar y solucionar un fallo.
+title: "[BUG]: "
+labels: bug
+assignees: ''
+---
+
+**Descripción del error**
+Una descripción clara de lo que falla.
+
+**Pasos para reproducir**
+1. Ve a '...'
+2. Haz clic en '...'
+3. Mira el error
+
+**Comportamiento esperado**
+Qué debería pasar.
+
+**Capturas**
+Si aplica, adjunta capturas.
+```
+
+Ejemplo `feature_request.md`:
+
+```markdown
+---
+name: Sugerir una mejora (Feature Request)
+about: Propón una idea o nueva característica.
+title: "[PROPUESTA]: "
+labels: enhancement
+assignees: ''
+---
+
+**¿Está relacionado con un problema?**
+Describe el dolor actual.
+
+**Solución que te gustaría**
+Qué debería pasar.
+
+**Alternativas consideradas**
+Otras opciones que barajaste.
+```
+
+Subir las plantillas:
+
+```bash
+git add .github/
+git commit -m "feat: agregar plantillas de issues"
+git push origin main
+```
+
+Al hacer **New Issue**, GitHub ofrece elegir entre tus plantillas.
+
+---
 
 ## 2.10 Pull requests
 
-Todavía en estudio. Cuando lo cierres: abrir PR desde rama o fork, review, merge y borrar la rama remota.
+Subir directo a `main` en equipo es pintar varios sobre el mismo lienzo: alguien pisa el trabajo del otro. El flujo sano es **rama propia → revisión → merge**.
+
+Un **Pull Request (PR)** no es un comando de Git: es la solicitud en GitHub de “revisen mi rama y, si está bien, mézclenla en `main`” (o en la rama base que elijas).
+
+### Flujo paso a paso
+
+**1. Rama de trabajo** (nadie codea en `main`):
+
+```bash
+git checkout -b feature/nueva-funcion
+# o: git switch -c feature/nueva-funcion
+```
+
+**2. Commits y push de la rama** (no de `main`):
+
+```bash
+git add .
+git commit -m "feat: agregar nueva funcion"
+git push -u origin feature/nueva-funcion
+```
+
+**3. Abrir el PR en GitHub**
+
+Desde la rama (o desde un fork): título, descripción, reviewers, checklist. Ligar el Issue: `Closes #14`.
+
+**4. Review y commits nuevos**
+
+Los comentarios van en el PR. Si hay que corregir, commits en **la misma rama** + `push`: el PR se actualiza solo.
+
+**5. Merge y limpieza**
+
+Cuando hay Approve (y checks en verde, si hay CI): **Merge**. Luego borra la rama remota desde la UI (o `git push origin --delete feature/nueva-funcion`) y en local:
+
+```bash
+git checkout main
+git pull
+git branch -d feature/nueva-funcion
+```
+
+### Por qué el PR es el filtro
+
+| Protección | Qué hace |
+|---|---|
+| **Code review** | Diff línea a línea; comentarios antes de tocar `main` |
+| **CI** | Tests/build automáticos; pueden bloquear el merge |
+| **Conflictos** | GitHub avisa si choca con `main`; hay que resolver antes |
+
+### Desde un fork
+
+Mismo idea: push a **tu** fork y abres el PR hacia el repo original (base = upstream, compare = tu rama).
+
+### Práctica de cierre (fase 2)
+
+1. Crea un Issue (bug o feature) en tu repo.
+2. Rama desde `main`, commits, `push`.
+3. Abre el PR con `Closes #N`, mergea y borra la rama remota.
