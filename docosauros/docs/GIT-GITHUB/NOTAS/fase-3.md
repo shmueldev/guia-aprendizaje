@@ -85,17 +85,25 @@ GitHub renderiza Markdown en README, Issues, PRs y Wikis.
 [Texto del enlace](https://ejemplo.com)
 
 `código en línea`
+```
 
+Bloque de código:
+
+````markdown
 ```python
 def hola():
     return "hola"
 ```
+````
 
+Tabla e imagen (sintaxis; la imagen es solo ejemplo):
+
+```markdown
 | Columna A | Columna B |
 |---|---|
 | dato | dato |
 
-![texto alt](ruta/o/url/imagen.png)
+![texto alt](https://ejemplo.com/imagen.png)
 ```
 
 ### README efectivo
