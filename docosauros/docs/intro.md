@@ -10,7 +10,7 @@ description: Orden para formarte como ingeniero de datos y data scientist.
 
 Esta guía lleva a un perfil doble: **ingeniero** que construye pipelines, APIs y plataformas, y **data scientist** que entiende los datos, mide bien y deja un modelo usable.
 
-El orden importa. Primero Python y Git/GitHub, hasta manejarlos con soltura. Después los datos y la estadística, el sistema que los mueve, el modelo, y al final la nube y la interfaz.
+El orden importa. Primero Python y Git/GitHub, hasta manejarlos con soltura. Después los datos y la estadística, el sistema que los mueve, el modelo, el contenedor que los empaqueta, y al final la nube y la interfaz.
 
 Marca el avance dentro de cada tecnología. No saltes de fase sin el mini-proyecto de esa fase.
 
@@ -62,14 +62,20 @@ Construir flujos de datos en más de un ambiente y más de una plataforma.
 2. [Databricks](/docs/databricks)
 3. [Airflow](/docs/airflow)
 
-## 7. Cloud
+## 7. Contenedores
+
+La API, el pipeline y el modelo viajan en una imagen, y salen igual en cada máquina.
+
+1. [Docker](/docs/docker)
+
+## 8. Cloud
 
 Nube más allá de crear una cuenta y subir un archivo.
 
 1. [AWS](/docs/aws)
 2. [Azure](/docs/azure)
 
-## 8. Frontend
+## 9. Frontend
 
 Una plataforma de datos también necesita una interfaz clara.
 

@@ -332,7 +332,34 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '7. Cloud',
+      label: '7. Contenedores',
+      collapsed: false,
+      items: [
+        'DOCKER/GUIA/docker',
+        {
+          type: 'category',
+          label: 'Docker · mis notas',
+          collapsed: true,
+          items: [
+            'DOCKER/NOTAS/notas',
+            'DOCKER/NOTAS/fase-1',
+            'DOCKER/NOTAS/fase-2',
+            'DOCKER/NOTAS/fase-3',
+            'DOCKER/NOTAS/fase-4',
+            'DOCKER/NOTAS/fase-5',
+            'DOCKER/NOTAS/fase-6',
+            'DOCKER/NOTAS/fase-7',
+            'DOCKER/NOTAS/fase-8',
+            'DOCKER/NOTAS/fase-9',
+            'DOCKER/NOTAS/fase-10',
+            'DOCKER/NOTAS/proyectos',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: '8. Cloud',
       collapsed: false,
       items: [
         'AWS/GUIA/aws',
@@ -369,7 +396,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '8. Frontend',
+      label: '9. Frontend',
       collapsed: false,
       items: [
         'DASH/GUIA/dash',
